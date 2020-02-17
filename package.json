@@ -1,0 +1,20 @@
+{
+  "name": "port",
+  "version": "1.0.0",
+  "description": "Powerful shell for rapidly deploying your WordPress projects.",
+  "main": "index.js",
+  "scripts": {
+      "css": "node-sass --output-style compressed --include-path scss scss/main.scss style.css",
+      "watch": "nodemon -e scss -x \"npm run css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomekjus/portfolio.git"
+  },
+  "author": "Tomasz Juśkiewicz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tomekjus/portfolio/issues"
+  },
+  "homepage": "https://github.com/tomekjus/portfolio#readme"
+}

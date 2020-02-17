@@ -16,110 +16,25 @@
 \*------------------------------------*/
 
 /* global box-sizing */
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,500,700&display=swap&subset=latin-ext');
+
 *,
 *:after,
 *:before {
-	-moz-box-sizing:border-box;
-	box-sizing:border-box;
-	-webkit-font-smoothing:antialiased;
-	font-smoothing:antialiased;
-	text-rendering:optimizeLegibility;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 /* html element 62.5% font-size for REM use */
 html {
 	font-size:62.5%;
 }
 body {
-	font:300 11px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	color:#444;
+	font-family: 'Oswald', sans-serif;
+	background-color: black;
+	color: white;
+	height: 100vh;
 }
-/* clear */
-.clear:before,
-.clear:after {
-    content:' ';
-    display:table;
-}
-
-.clear:after {
-    clear:both;
-}
-.clear {
-    *zoom:1;
-}
-img {
-	max-width:100%;
-	vertical-align:bottom;
-}
-a {
-	color:#444;
-	text-decoration:none;
-}
-a:hover {
-	color:#444;
-}
-a:focus {
-	outline:0;
-}
-a:hover,
-a:active {
-	outline:0;
-}
-input:focus {
-	outline:0;
-	border:1px solid #04A4CC;
-}
-
-/*------------------------------------*\
-    STRUCTURE
-\*------------------------------------*/
-
-/* wrapper */
-.wrapper {
-	max-width:1280px;
-	width:95%;
-	margin:0 auto;
-	position:relative;
-}
-/* header */
-.header {
-
-}
-/* logo */
-.logo {
-
-}
-.logo-img {
-
-}
-/* nav */
-.nav {
-
-}
-/* sidebar */
-.sidebar {
-
-}
-/* footer */
-.footer {
-
-}
-
-/*------------------------------------*\
-    PAGES
-\*------------------------------------*/
-
-
-
-/*------------------------------------*\
-    IMAGES
-\*------------------------------------*/
-
-
-
-/*------------------------------------*\
-	TYPOGRAPHY
-\*------------------------------------*/
-
 @font-face {
 	font-family:'Font-Name';
 	src:url('fonts/font-name.eot');
@@ -130,178 +45,84 @@ input:focus {
     font-weight:normal;
     font-style:normal;
 }
-
-/*------------------------------------*\
-    RESPONSIVE
-\*------------------------------------*/
-
-@media only screen and (min-width:320px) {
-
+.main {
+	height: 100vh;
 }
-@media only screen and (min-width:480px) {
-
+.hi {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 10rem;
 }
-@media only screen and (min-width:768px) {
-
-}
-@media only screen and (min-width:1024px) {
-
-}
-@media only screen and (min-width:1140px) {
-
-}
-@media only screen and (min-width:1280px) {
-
-}
-@media only screen and (-webkit-min-device-pixel-ratio:1.5),
-	   only screen and (min-resolution:144dpi) {
-
+.portfolio-btn, .about-btn, .contact-btn, .social-btn {
+	color: white;
+	text-decoration: none;
+	font-size: 3rem;
+	z-index: 99999;
+	position: absolute;
+	transition: color .8s ease-in-out;
 }
 
-/*------------------------------------*\
-    MISC
-\*------------------------------------*/
-
-::selection {
-	background:#04A4CC;
-	color:#FFF;
-	text-shadow:none;
-}
-::-webkit-selection {
-	background:#04A4CC;
-	color:#FFF;
-	text-shadow:none;
-}
-::-moz-selection {
-	background:#04A4CC;
-	color:#FFF;
-	text-shadow:none;
+.portfolio-btn {
+	top: 5rem;
+	left: 5rem;
 }
 
-/*------------------------------------*\
-    WORDPRESS CORE
-\*------------------------------------*/
-
-.alignnone {
-	margin:5px 20px 20px 0;
-}
-.aligncenter,
-div.aligncenter {
-	display:block;
-	margin:5px auto 5px auto;
-}
-.alignright {
-	float:right;
-	margin:5px 0 20px 20px;
-}
-.alignleft {
-	float:left;
-	margin:5px 20px 20px 0;
-}
-a img.alignright {
-	float:right;
-	margin:5px 0 20px 20px;
-}
-a img.alignnone {
-	margin:5px 20px 20px 0;
-}
-a img.alignleft {
-	float:left;
-	margin:5px 20px 20px 0;
-}
-a img.aligncenter {
-	display:block;
-	margin-left:auto;
-	margin-right:auto;
-}
-.wp-caption {
-	background:#FFF;
-	border:1px solid #F0F0F0;
-	max-width:96%;
-	padding:5px 3px 10px;
-	text-align:center;
-}
-.wp-caption.alignnone {
-	margin:5px 20px 20px 0;
-}
-.wp-caption.alignleft {
-	margin:5px 20px 20px 0;
-}
-.wp-caption.alignright {
-	margin:5px 0 20px 20px;
-}
-.wp-caption img {
-	border:0 none;
-	height:auto;
-	margin:0;
-	max-width:98.5%;
-	padding:0;
-	width:auto;
-}
-.wp-caption .wp-caption-text,
-.gallery-caption {
-	font-size:11px;
-	line-height:17px;
-	margin:0;
-	padding:0 4px 5px;
-}
-.sticky {
-
-}
-.bypostauthor {
-
+.about-btn {
+	top: 5rem;
+	right: 5rem;
 }
 
-/*------------------------------------*\
-    PRINT
-\*------------------------------------*/
+.contact-btn {
+	bottom: 5rem;
+	right: 5rem;
+}
 
-@media print {
-	* {
-		background:transparent !important;
-		color:#000 !important;
-		box-shadow:none !important;
-		text-shadow:none !important;
-	}
-	a,
-	a:visited {
-		text-decoration:underline;
-	}
-	a[href]:after {
-		content:" (" attr(href) ")";
-	}
-	abbr[title]:after {
-		content:" (" attr(title) ")";
-	}
-	.ir a:after,
-	a[href^="javascript:"]:after,
-	a[href^="#"]:after {
-		content:"";
-	}
-	pre,blockquote {
-		border:1px solid #999;
-		page-break-inside:avoid;
-	}
-	thead {
-		display:table-header-group;
-	}
-	tr,img {
-		page-break-inside:avoid;
-	}
-	img {
-		max-width:100% !important;
-	}
-	@page {
-		margin:0.5cm;
-	}
-	p,
-	h2,
-	h3 {
-		orphans:3;
-		widows:3;
-	}
-	h2,
-	h3 {
-		page-break-after:avoid;
-	}
+.social-btn {
+	bottom: 5rem;
+	left: 5rem;
+}
+
+.portfolio-btn:focus, .about-btn:focus {
+	outline: 0;
+}
+
+.container {
+	/* margin: 5rem; */
+}
+
+.portfolio-bgc, .about-bgc, .contact-bgc, .social-bgc {
+	height: 7rem;
+	width: 7rem;
+	border-radius: 50%;
+	position: fixed;
+	background-color: #FFF;
+	z-index: 1;
+	transition: all .8s ease-in-out;
+	transform: scale(0);
+}
+.portfolio-bgc {
+	left: -14px;
+	top: -14px;
+}
+.about-bgc {
+	right: -14px;
+	top: -14px;
+}
+.contact-bgc {
+	bottom: -14px;
+	left: -14px;
+}
+
+.social-bgc {
+	bottom: -14px;
+	right: -14px;
+}
+
+.bgc--active {
+	transform: scale(50);
+}
+.btn--active {
+	color: #000;
 }
